@@ -1,0 +1,153 @@
+@keyframes MoveToTop{
+    0%{
+        top: 160px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+@keyframes MoveTobottom{
+    0%{
+        bottom: 120px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+@keyframes GrowUp{
+    0%{
+        font-size: 100px;
+    }
+    100%{
+        font-size: 170px;
+    }
+}
+@keyframes BeSmall{
+    0%{
+        font-size: 170px;
+    }
+    100%{
+        font-size: 100px;
+    }
+}
+@keyframes FadeToTop{
+    0%{
+        bottom:0px;
+    }
+    100%{
+        bottom:140px;
+    }
+}
+@keyframes FadeToBottom{
+    0%{
+        top:0px;
+    }
+    100%{
+        top:160px;
+    }
+}
+@keyframes imgGrow{
+    0%{
+        flex:1;
+    }
+    100%{
+        flex: 2;
+    }
+}
+@keyframes imgMinimize{
+    0%{
+        flex:2;
+    }
+    100%{
+        flex: 1;
+    }
+}
+
+
+
+body, html{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.sections{
+    flex:1;
+    width: 20%;
+}
+.sections img{
+    width: 100%;
+    height: 100%;
+} 
+.text-cont{
+    position: relative;
+    bottom: 112%;
+    color: white;
+    text-align: center;
+    line-height: 800%;
+}
+.text-cont p{
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-family: Amatic SC;
+}
+.p1,.p3{
+    font-size: 100px;
+}
+.p2{
+    font-size: 100px;
+}
+
+.p1{
+    position: relative;
+    bottom: 140px;  
+}
+.p3{
+    position: relative;
+     top: 160px; 
+}
+.p1-after{
+    animation: MoveTobottom 1s;
+    bottom: 0px;
+}
+.p2-after{
+    font-size: 170px;
+    animation: GrowUp 1s;
+
+}
+.p3-after{
+    top: 0px;
+    animation: MoveToTop 1s;
+}
+.text-cont-after{
+    line-height: 400%;
+}
+.p1-before{
+    animation: FadeToTop 1s;
+    bottom: 140px;
+}
+.p2-before{
+    font-size: 100px;
+    animation: BeSmall 1s;
+
+}
+.p3-before{
+    top: 160px;
+    animation: FadeToBottom 1s;
+}
+.text-cont-before{
+    line-height: 800%;
+}
+.section-after{
+    animation: imgGrow 1s;
+    flex :2;
+}
+.section-before{
+    animation: imgMinimize 1s;
+    flex: 1;
+}
